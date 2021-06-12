@@ -1,12 +1,9 @@
-package guru.springframework.spring5webapp.model;
+package com.example.guru.model;
 
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by jt on 5/16/17.
- */
 @Entity
 public class Book {
     @Id

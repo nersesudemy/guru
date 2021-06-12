@@ -1,10 +1,9 @@
-package guru.springframework.spring5webapp.repositories;
+package com.example.guru.repositories;
 
-import guru.springframework.spring5webapp.domain.Author;
+import com.example.guru.model.Author;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-/**
- * Created by jt on 12/23/19.
- */
+@Repository
 public interface AuthorRepository extends CrudRepository<Author, Long> {
 }
