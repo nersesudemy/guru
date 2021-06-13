@@ -1,5 +1,8 @@
 package com.example.guru.model;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -12,10 +15,16 @@ public class Book {
     private String title;
     private String isbn;
 
-    @ManyToMany
+    @ManyToMany(fetch=FetchType.LAZY)
     @JoinTable(name = "author_book", joinColumns = @JoinColumn(name = "book_id"),
     inverseJoinColumns = @JoinColumn(name = "author_id"))
     private Set<Author> authors = new HashSet<>();
+
+
+    @Getter
+    @Setter
+    @ManyToOne(fetch=FetchType.LAZY)
+    private Publisher publisher;
 
     public Book() {
     }
