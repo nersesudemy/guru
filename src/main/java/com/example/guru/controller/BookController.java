@@ -1,6 +1,7 @@
 package com.example.guru.controller;
 
-import com.example.guru.repositories.BookRepository;
+import com.example.guru.model.Book;
+import com.example.guru.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -15,9 +16,9 @@ public class BookController {
 
     @RequestMapping("/books")
     public String getBooks(Model model){
+        Iterable<Book> books = bookRepository.findAll();
+        model.addAttribute("books", books);
 
-        model.addAttribute("books", bookRepository.findAll());
-
-        return "books";
+        return "books/list";
     }
 }

@@ -1,4 +1,4 @@
-package com.example.guru.repositories;
+package com.example.guru.repository;
 
 import com.example.guru.model.Publisher;
 import org.springframework.data.repository.CrudRepository;

@@ -1,7 +1,7 @@
 package com.example.guru.controller.rest;
 
 import com.example.guru.model.Book;
-import com.example.guru.repositories.BookRepository;
+import com.example.guru.repository.BookRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

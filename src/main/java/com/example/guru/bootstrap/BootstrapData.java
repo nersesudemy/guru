@@ -3,9 +3,9 @@ package com.example.guru.bootstrap;
 import com.example.guru.model.Author;
 import com.example.guru.model.Book;
 import com.example.guru.model.Publisher;
-import com.example.guru.repositories.AuthorRepository;
-import com.example.guru.repositories.BookRepository;
-import com.example.guru.repositories.PublisherRepository;
+import com.example.guru.repository.AuthorRepository;
+import com.example.guru.repository.BookRepository;
+import com.example.guru.repository.PublisherRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
@@ -23,7 +23,7 @@ public class BootstrapData implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        initData();
+//        initData();
     }
 
     private void initData() {
